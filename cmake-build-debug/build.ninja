@@ -49,23 +49,23 @@ cmake_ninja_workdir = /Users/rylancody/Desktop/CLionProjects/resume/libraryProje
 
 build cmake_object_order_depends_target_libraryProject: phony || CMakeFiles/libraryProject.dir
 
-build CMakeFiles/libraryProject.dir/main.cpp.o: CXX_COMPILER__libraryProject_unscanned_Debug /Users/rylancody/Desktop/CLionProjects/resume/libraryProject/main.cpp || cmake_object_order_depends_target_libraryProject
-  DEP_FILE = CMakeFiles/libraryProject.dir/main.cpp.o.d
+build CMakeFiles/libraryProject.dir/src/Book.cpp.o: CXX_COMPILER__libraryProject_unscanned_Debug /Users/rylancody/Desktop/CLionProjects/resume/libraryProject/src/Book.cpp || cmake_object_order_depends_target_libraryProject
+  DEP_FILE = CMakeFiles/libraryProject.dir/src/Book.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/libraryProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/libraryProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/libraryProject.dir/src
 
-build CMakeFiles/libraryProject.dir/Book.cpp.o: CXX_COMPILER__libraryProject_unscanned_Debug /Users/rylancody/Desktop/CLionProjects/resume/libraryProject/Book.cpp || cmake_object_order_depends_target_libraryProject
-  DEP_FILE = CMakeFiles/libraryProject.dir/Book.cpp.o.d
+build CMakeFiles/libraryProject.dir/src/User.cpp.o: CXX_COMPILER__libraryProject_unscanned_Debug /Users/rylancody/Desktop/CLionProjects/resume/libraryProject/src/User.cpp || cmake_object_order_depends_target_libraryProject
+  DEP_FILE = CMakeFiles/libraryProject.dir/src/User.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/libraryProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/libraryProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/libraryProject.dir/src
 
-build CMakeFiles/libraryProject.dir/User.cpp.o: CXX_COMPILER__libraryProject_unscanned_Debug /Users/rylancody/Desktop/CLionProjects/resume/libraryProject/User.cpp || cmake_object_order_depends_target_libraryProject
-  DEP_FILE = CMakeFiles/libraryProject.dir/User.cpp.o.d
+build CMakeFiles/libraryProject.dir/src/main.cpp.o: CXX_COMPILER__libraryProject_unscanned_Debug /Users/rylancody/Desktop/CLionProjects/resume/libraryProject/src/main.cpp || cmake_object_order_depends_target_libraryProject
+  DEP_FILE = CMakeFiles/libraryProject.dir/src/main.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/libraryProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/libraryProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/libraryProject.dir/src
 
 
 # =============================================================================
@@ -75,7 +75,7 @@ build CMakeFiles/libraryProject.dir/User.cpp.o: CXX_COMPILER__libraryProject_uns
 #############################################
 # Link the executable libraryProject
 
-build libraryProject: CXX_EXECUTABLE_LINKER__libraryProject_Debug CMakeFiles/libraryProject.dir/main.cpp.o CMakeFiles/libraryProject.dir/Book.cpp.o CMakeFiles/libraryProject.dir/User.cpp.o
+build libraryProject: CXX_EXECUTABLE_LINKER__libraryProject_Debug CMakeFiles/libraryProject.dir/src/Book.cpp.o CMakeFiles/libraryProject.dir/src/User.cpp.o CMakeFiles/libraryProject.dir/src/main.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
   OBJECT_DIR = CMakeFiles/libraryProject.dir
   POST_BUILD = :

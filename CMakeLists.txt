@@ -4,8 +4,8 @@ project(libraryProject)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(libraryProject
-        main.cpp
-        Book.cpp
-        Book.h
-        User.h
-        User.cpp)
+        src/Book.cpp
+        src/Book.h
+        src/User.h
+        src/User.cpp
+        src/main.cpp)

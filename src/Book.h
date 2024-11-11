@@ -17,7 +17,7 @@ class Book {
 public:
     //book constructors
     Book(void);
-    Book(string title, string author, int ISBN, string genre, bool availability, User* borrower);
+    Book(string title, string author, int ISBN, string genre, bool availability);
     Book(Book& copy);
 
     //book destructor
@@ -29,7 +29,7 @@ public:
     int getISBN(void);
     string getGenre(void);
     bool getAvailability(void);
-    User* getBorrower(void);
+    //User* getBorrower(void);
 
     //mutators
     void setTitle(string newTitle);
@@ -37,7 +37,7 @@ public:
     void setISBN(int newISBN);
     void setGenre(string newGenre);
     void setAvailability(bool newAvailability);
-    void setBorrower(User* newBorrower);
+    //void setBorrower(User* newBorrower);
 
 private:
     string title; //title of the book
@@ -45,7 +45,7 @@ private:
     int ISBN; //ISBN of the book, used as key in AVL tree
     string genre; //genre of the book
     bool availability; //availability of the book, true if available, false otherwise
-    User* borrower; //pointer to the user that is currently borrowing book, null if not checked out (available)
+    //User* borrower; //pointer to the user that is currently borrowing book, null if not checked out (available)
 };
 
 

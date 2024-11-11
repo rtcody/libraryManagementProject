@@ -12,16 +12,16 @@ Book::Book() {
     this->author = "";
     this->ISBN = -1; //-1 denotes that a book has not been fully instantiated here
     this->availability = true;
-    this->borrower = nullptr;
+    //this->borrower = nullptr;
 }
 
-Book::Book(string title, string author, int ISBN, string genre, bool availability, User *borrower) {
+Book::Book(string title, string author, int ISBN, string genre, bool availability) {
     this->title = std::move(title);
     this-> author = std::move(author);
     this->ISBN = ISBN;
     this->genre = std::move(genre);
     this->availability = availability;
-    this->borrower = borrower;
+    //this->borrower = borrower;
 }
 
 Book::Book(Book& copy) {
@@ -30,19 +30,19 @@ Book::Book(Book& copy) {
     this->ISBN = copy.ISBN;
     this->genre = copy.genre;
     this->availability = copy.availability;
-    this->borrower = copy.borrower;
+    //this->borrower = copy.borrower;
 }
 
 //destructor
 Book::~Book() {
-    string tempTitle = title;
+    /*string tempTitle = title;
 
     if (borrower != nullptr)
     {
         delete borrower;
     }
 
-    cout << tempTitle << " deleted successfully" << endl;
+    cout << tempTitle << " deleted successfully" << endl;*/
 }
 
 

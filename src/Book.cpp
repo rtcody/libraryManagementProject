@@ -13,7 +13,7 @@ Book::Book() {
     this->ISBN = -1; //-1 denotes that a book has not been fully instantiated here
     this->genre = "";
     this->availability = true;
-    this->borrower;
+    this->borrower = nullptr;
 }
 
 Book::Book(string title, string author, long ISBN, string genre, bool availability, User* borrower) {
@@ -87,21 +87,21 @@ void Book::setBorrower(User* newBorrower) {
     this->borrower = newBorrower;
 }
 
-istream & operator >>(istream& in, Book& newBook) {
+istream & operator >>(istream& in, Book*& newBook) {
     cout << "Enter book title: ";
-    getline(in, newBook.title);
+    getline(in, newBook->title);
 
     cout << "Enter authors name: ";
-    getline(in, newBook.author);
+    getline(in, newBook->author);
 
     cout << "Enter ISBN number: ";
-    in >> newBook.ISBN;
+    in >> newBook->ISBN;
     in.ignore(numeric_limits<streamsize>::max(), '\n');
 
     cout << "Enter books genre: ";
-    getline(in, newBook.genre);
+    getline(in, newBook->genre);
 
-    newBook.availability = true;
+    newBook->availability = true;
 
     return in;
 }
@@ -120,8 +120,7 @@ ostream& operator <<(ostream& out, const Book& book) {
     }
     else
     {
-        out << "True,";
-        out << "Borrower: No Borrower" << endl;
+        out << "True, ";
     }
 
 
@@ -132,6 +131,13 @@ void Book::checkOutBook(User* borrower) {
     if (this->availability) {
         this->availability = false;
         this->borrower = borrower;
+    }
+}
+
+void Book::reShelfBook(User* borrower) {
+    if (this->borrower = borrower) {
+        this->availability = true;
+        this->borrower = nullptr;
     }
 }
 

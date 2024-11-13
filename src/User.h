@@ -47,6 +47,7 @@ public:
     friend std::ostream& operator << (ostream& out, const User& user);
 
     void borrowBook(Book& book);
+    void returnBook(Book& book);
 private:
     string username; //Users username
     string password; //Users password

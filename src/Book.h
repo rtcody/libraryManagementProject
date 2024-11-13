@@ -40,10 +40,14 @@ public:
     void setBorrower(User* newBorrower);
 
     //others
-    friend std::istream& operator >>(istream& in, Book& newBook);
+    friend std::istream& operator >>(istream& in, Book*& newBook);
     friend std::ostream& operator <<(ostream& out, const Book& book);
+    bool operator ==(const Book& other) {
+        return this->ISBN == other.ISBN;
+    }
 
     void checkOutBook(User* borrower);
+    void reShelfBook(User* borrower);
 
 private:
     string title; //title of the book

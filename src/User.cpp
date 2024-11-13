@@ -127,8 +127,8 @@ std::ostream& operator << (ostream& out, const User& user) {
         out << "None" << endl;
     }
     else {
-        for (const auto & borrowedBook : user.borrowedBooks) {
-            out << borrowedBook.getTitle() << "|";
+        for (int i = 0; i < 5; i++) {
+            out << user.borrowedBooks[i].getTitle() << "|";
         }
         out << endl;
     }
@@ -155,5 +155,15 @@ void User::borrowBook(Book& book) {
        book.checkOutBook(this);
        borrowedBooks.push_back(book);
    }
+}
+
+void User::returnBook(Book & book) {
+    for (const auto& curBook : borrowedBooks) {
+        if (book.getISBN() == curBook.getISBN()) {
+            book.reShelfBook(this);
+            borrowedBooks.erase(std::remove(borrowedBooks.begin(), borrowedBooks.end(), curBook), borrowedBooks.end());
+            break;
+        }
+    }
 }
 

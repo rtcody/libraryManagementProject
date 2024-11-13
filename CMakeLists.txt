@@ -8,4 +8,5 @@ add_executable(libraryProject
         src/Book.h
         src/User.h
         src/User.cpp
-        src/main.cpp)
+        src/main.cpp
+        src/AVLTree.hpp)
